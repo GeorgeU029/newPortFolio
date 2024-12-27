@@ -15,13 +15,16 @@ const ContactMe = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
+    console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+    console.log("Public Key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
     emailjs
-    .send(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID, // Use the environment variable
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Use the environment variable
-      formData,
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY // Use the environment variable
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, // Use the environment variable
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Use the environment variable
+        formData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY // Use the environment variable
       )
       .then(
         (result) => {

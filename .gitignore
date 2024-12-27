@@ -27,7 +27,5 @@ node_modules/
 build/
 .env
 .DS_Store
-REACT_APP_EMAILJS_SERVICE_ID=service_to0g211
-REACT_APP_EMAILJS_TEMPLATE_ID=template_781sucf
-REACT_APP_EMAILJS_PUBLIC_KEY=72DnGcS5AqOzcZ4w8
+
 
