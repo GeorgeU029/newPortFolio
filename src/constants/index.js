@@ -1,0 +1,201 @@
+export const navLinks = [
+    {
+      id: 1,
+      name: 'Home',
+      href: '#home',
+    },
+    {
+      id: 2,
+      name: 'About',
+      href: '#about',
+    },
+    {
+      id: 3,
+      name: 'Work',
+      href: '#work',
+    },
+    {
+      id: 4,
+      name: 'Contact',
+      href: '#contact',
+    },
+  ];
+  
+  export const clientReviews = [
+    {
+      id: 1,
+      name: 'Emily Johnson',
+      position: 'Marketing Director at GreenLeaf',
+      img: 'assets/review1.png',
+      review:
+        'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
+    },
+    {
+      id: 2,
+      name: 'Mark Rogers',
+      position: 'Founder of TechGear Shop',
+      img: 'assets/review2.png',
+      review:
+        'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
+    },
+    {
+      id: 3,
+      name: 'John Dohsas',
+      position: 'Project Manager at UrbanTech ',
+      img: 'assets/review3.png',
+      review:
+        'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+    },
+    {
+      id: 4,
+      name: 'Ether Smith',
+      position: 'CEO of BrightStar Enterprises',
+      img: 'assets/review4.png',
+      review:
+        'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
+    },
+  ];
+  
+  export const myProjects = [
+    {
+      title: 'League Of Legends Stat Tracker',
+      desc: 'LeagueStats is a comprehensive platform for League of Legends players to explore and visualize their in-game performance. Built as a full-stack web application, it combines the power of React and Python to deliver an intuitive and dynamic user experience. With seamless integration of the Riot Games API, LeagueStats fetches real-time data, showcasing detailed player statistics, including champion performance, win rates, and match history. Designed for gamers of all skill levels, it allows users to search and compare stats effortlessly, offering a unique tool to analyze and improve gameplay.',
+      subdesc:
+        'Built as a full-stack web application using React, Python, Flask AND Material UI. LeagueStats delivers real-time player statistics and match insights with seamless API integration and a user-friendly design.',
+      href: 'https://myleagueoflegendsstats.netlify.app/',
+      texture: '/textures/project/Project1.2.PNG',
+      logo: '/assets/project-one-logo.png',
+      logoStyle: {
+        backgroundColor: '#2A1816',
+        border: '0.2px solid #36201D',
+        boxShadow: '0px 0px 60px 0px #AA3C304D',
+      },
+      spotlight: '/assets/spotlight1.png',
+      tags: [
+        {
+          id: 1,
+          name: 'React.js',
+          path: '/assets/react.svg',
+        },
+        {
+          id: 2,
+          name: 'Python',
+          path: '/assets/python.svg',
+        },
+        {
+          id: 3,
+          name: 'Github',
+          path: '/assets/github (1).png',
+        },
+
+      ],
+    },
+    {
+      title: 'Code Zone - Learn, Build, and Empower',
+      desc: 'CodeBase is an innovative learning platform designed to improve students proficiency in Data Structures and Algorithms (DSA) using spatial recall-based techniques. By delivering targeted notifications and interactive problem-solving sessions, CodeBase helps users retain complex concepts more effectively. Built as a collaborative effort, the application features seamless integration between a React-based frontend and a Node.js-powered backend, providing a smooth and engaging user experience tailored for aspiring software engineers.',
+      subdesc:
+        'Developed as a collaborative project using React, Node.js, and a custom notification system, CodeBase combines modern web technologies to help students enhance their DSA skills through spatial recall-based learning.',
+      href: 'https://code-z0ne.vercel.app/',
+      texture: '/textures/project/Project2.PNG',
+      logo: '/assets/project-logo2.png',
+      logoStyle: {
+        backgroundColor: '#13202F',
+        border: '0.2px solid #17293E',
+        boxShadow: '0px 0px 60px 0px #2F6DB54D',
+      },
+      spotlight: '/assets/spotlight2.png',
+      tags: [
+        {
+          id: 1,
+          name: 'React.js',
+          path: '/assets/react.svg',
+        },
+        {
+          id: 2,
+          name: 'Node.js',
+          path: '/assets/node-js.png',
+        },
+        {
+          id: 3,
+          name: 'MongoDB',
+          path: '/assets/mongo-DB-logo.png',
+        },
+      ],
+    },
+    {
+      title: 'Vida Audio - Music Visualize',
+      desc: 'The Music Visualizer is a dynamic and immersive web application that brings music to life through real-time visual effects. Designed for a hackathon, it leverages cutting-edge audio analysis tools to transform sound into stunning visual displays, creating an interactive experience that resonates with every beat. The visualizer seamlessly synchronizes with any audio input, delivering smooth and captivating animations that react instantly and accurately to the music.',
+      subdesc:'Built with HTML, CSS, and JavaScript, the Music Visualizer harnesses the Web Audio API to create real-time, responsive visual effects, offering a seamless fusion of technology and art.',
+      href: 'https://vidaaudio.us/',
+      texture: '/textures/project/Project3.PNG',
+      logo: '/assets/vidaAudioLogo.png',
+      logoStyle: {
+        backgroundColor: '#60f5a1',
+        background:
+          'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
+        border: '0.2px solid rgba(208, 213, 221, 1)',
+        boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+      },
+      spotlight: '/assets/spotlight3.png',
+      tags: [
+        {
+          id: 1,
+          name: 'JavaScript',
+          path: '/assets/javascript-logo.webp',
+        },
+        {
+          id: 2,
+          name: 'HTML',
+          path: '/assets/html-logo.png',
+        },
+        {
+          id: 3,
+          name: 'css',
+          path: '/assets/css-3-logo-png-transparent.png',
+        },
+      ],
+    },
+   
+  
+  ];
+  
+  export const calculateSizes = (isSmall, isMobile, isTablet) => {
+    return {
+      deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
+      deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
+      cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
+      reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
+      ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
+      targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
+    };
+  };
+  
+  export const workExperiences = [
+    {
+      id: 1,
+      name: 'Framer',
+      pos: 'Lead Web Developer',
+      duration: '2022 - Present',
+      title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
+      icon: '/assets/framer.svg',
+      animation: 'victory',
+    },
+    {
+      id: 2,
+      name: 'Figma',
+      pos: 'Web Developer',
+      duration: '2020 - 2022',
+      title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
+      icon: '/assets/figma.svg',
+      animation: 'clapping',
+    },
+    {
+      id: 3,
+      name: 'Notion',
+      pos: 'Junior Web Developer',
+      duration: '2019 - 2020',
+      title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
+      icon: '/assets/notion.svg',
+      animation: 'salute',
+    },
+  ];
