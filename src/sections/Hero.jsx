@@ -13,34 +13,18 @@ import Button from '../components/Button';
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [isLoaded, setIsLoaded] = useState(false);
-  const [typedText, setTypedText] = useState('');
-  const fullText = `A curious student striving to grow,\nsolve problems, and make an impact one step at a time.`;
-  const typingSpeed = 80;
 
-  // Text typing effect
   useEffect(() => {
-    if (isLoaded) {
-      const delayTimer = setTimeout(() => {
-        let index = 0;
-        const typingTimer = setInterval(() => {
-          if (index <= fullText.length) {
-            setTypedText(fullText.slice(0, index));
-            index++;
-          } else {
-            clearInterval(typingTimer); // Stop typing when done
-          }
-        }, typingSpeed);
-
-        return () => clearInterval(typingTimer); // Cleanup typing timer
-      }, 1000); // Delay for 1 second after the computer has loaded
-
-      return () => clearTimeout(delayTimer); // Cleanup delay timer
-    }
+    const loadingTimeout = setTimeout(() => {
+      if (!isLoaded) {
+        setIsLoaded(true); // Fallback in case loading takes too long
+      }
+    }, 15000); // 15-second fallback for loading
+    return () => clearTimeout(loadingTimeout);
   }, [isLoaded]);
 
-  // Handle Suspense fallback resolution
   const handleSceneLoaded = () => {
-    setIsLoaded(true); // Trigger this when all 3D content is ready
+    setIsLoaded(true); // Trigger when the scene has finished loading
   };
 
   return (
@@ -49,18 +33,6 @@ const Hero = () => {
         <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
           Hey my name is George <span className="waving-hand">👋</span>
         </p>
-        {isLoaded && (
-          <div className="typewriter-wrapper">
-            {typedText.split('\n').map((line, index) => (
-              <div key={index} className="typewriter-line">
-                {line}
-                {index === typedText.split('\n').length - 1 && (
-                  <span className="typewriter-cursor" />
-                )}
-              </div>
-            ))}
-          </div>
-        )}
       </div>
 
       <div className="w-full h-full absolute inset-0">
@@ -71,28 +43,29 @@ const Hero = () => {
               <GamerRoom
                 position={[0, -3, 4]}
                 rotation={[0.1, 0, 0]}
-                scale={isMobile ? 4 : 10} // Adjust scale for mobile
+                scale={isMobile ? 4 : 10}
+                onLoad={handleSceneLoaded}
               />
             </HeroCamera>
             <group>
               <Pacman
-                position={isMobile ? [-5, 2, -3] : [-6, 3, -2]} // Adjusted position for mobile and desktop
+                position={isMobile ? [-5, 2, -3] : [-6, 3, -2]}
                 rotation={[0.5, 4, -0.1]}
                 scale={isMobile ? 0.4 : 0.5}
               />
             </group>
             <group>
               <SpaceInvader
-                position={isMobile ? [5, 2, -3] : [10, 3, -4]} // Adjusted position for mobile and desktop
+                position={isMobile ? [5, 2, -3] : [10, 3, -4]}
                 rotation={[0.5, 2.3, -0.1]}
-                scale={isMobile ? 0.1 : 0.2} // Slightly reduce size for mobile
+                scale={isMobile ? 0.1 : 0.2}
               />
             </group>
             <group>
               <MajorasMask
-                position={isMobile ? [-5, -2, -3] : [-11, 0, -4]} // Adjusted position for mobile and desktop
+                position={isMobile ? [-5, -2, -3] : [-11, 0, -4]}
                 rotation={[0.5, 0.9, -0.1]}
-                scale={isMobile ? 0.02 : 0.03} // Slightly reduce size for mobile
+                scale={isMobile ? 0.02 : 0.03}
               />
             </group>
 
@@ -101,13 +74,12 @@ const Hero = () => {
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
         </Canvas>
-        {/** Trigger the loading completion */}
         <div style={{ display: 'none' }} ref={handleSceneLoaded} />
       </div>
 
-      {isLoaded && ( // Button will only render when 3D content is loaded
-        <div className='absolute bottom-40 left-0 right-0 w-full z-10 c-space'>
-          <a href='#about' className='w-fit'>
+      {isLoaded && (
+        <div className="absolute bottom-40 left-0 right-0 w-full z-10 c-space">
+          <a href="#about" className="w-fit">
             <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
           </a>
         </div>
