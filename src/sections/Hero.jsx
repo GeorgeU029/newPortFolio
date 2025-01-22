@@ -69,33 +69,34 @@ const Hero = () => {
             <PerspectiveCamera makeDefault position={[0, 0, 25]} />
             <HeroCamera isMobile={isMobile}>
               <GamerRoom
-                position={[-0.5, -2, 8.5]}
-                rotation={[0.2, 0, 0]}
-                scale={isMobile ? 0.6 : .8} // Adjust scale for mobile
+                position={[0, -3, 4]}
+                rotation={[0.1, 0, 0]}
+                scale={isMobile ? 4 : 10} // Adjust scale for mobile
               />
             </HeroCamera>
             <group>
               <Pacman
-                position={isMobile ? [-6, 2, -4] : [-7, 3, -3]} // Adjust position for mobile
+                position={isMobile ? [-5, 2, -3] : [-6, 3, -2]} // Adjusted position for mobile and desktop
                 rotation={[0.5, 4, -0.1]}
                 scale={isMobile ? 0.4 : 0.5}
               />
             </group>
             <group>
               <SpaceInvader
-                position={isMobile ? [6, 2, -4] : [11, 3, -5]} // Adjust position for mobile
+                position={isMobile ? [5, 2, -3] : [10, 3, -4]} // Adjusted position for mobile and desktop
                 rotation={[0.5, 2.3, -0.1]}
                 scale={isMobile ? 0.1 : 0.2} // Slightly reduce size for mobile
               />
             </group>
             <group>
               <MajorasMask
-                position={isMobile ? [-6, -2, -4] : [-12, 0, -5]} // Adjust position for mobile
+                position={isMobile ? [-5, -2, -3] : [-11, 0, -4]} // Adjusted position for mobile and desktop
                 rotation={[0.5, 0.9, -0.1]}
                 scale={isMobile ? 0.02 : 0.03} // Slightly reduce size for mobile
               />
             </group>
-            <ambientLight intensity={1} color={'pink'} />
+
+            <ambientLight intensity={1} color={'green'} />
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>

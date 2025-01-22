@@ -1,24 +1,11 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
-import gsap from 'gsap';
 
 const SpaceInvader = (props) => {
-  const groupRef = useRef(); // Ref for the group to apply animation
-  const { nodes } = useGLTF('/models/space_invader.glb'); // Ensure the path is correct
+  const groupRef = useRef(); // Ref for the group
 
-  useEffect(() => {
-    if (groupRef.current) {
-      // Animate the group position on the y-axis
-      gsap.to(groupRef.current.position, {
-        y: '+=0.5', // Move up by 0.5 units
-        duration: 1.5, // Animation duration
-        repeat: -1, // Infinite repeat
-        yoyo: true, // Reverse direction after reaching the target
-        ease: 'power1.inOut', // Smooth easing
-      });
-    }
-  }, []);
+  const { nodes } = useGLTF('/models/space_invader.glb'); // Ensure the path is correct
 
   return (
     <group ref={groupRef} {...props} dispose={null}>

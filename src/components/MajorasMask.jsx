@@ -1,23 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
-import gsap from 'gsap';
 
 const MajorasMask = (props) => {
   const { nodes, materials } = useGLTF('/models/majoras_mask.glb'); // Ensure path correctness
   const maskRef = useRef();
-
-  // Animate the mask up and down
-  useEffect(() => {
-    if (maskRef.current) {
-      gsap.to(maskRef.current.position, {
-        y: "+=0.5", // Move up by 0.5 units
-        duration: 2,
-        repeat: -1, // Infinite loop
-        yoyo: true, // Reverse the animation
-        ease: "power1.inOut",
-      });
-    }
-  }, []);
 
   return (
     <group {...props} dispose={null} ref={maskRef}>
