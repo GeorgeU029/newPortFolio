@@ -1,15 +1,35 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Center, OrbitControls, Html } from '@react-three/drei';
 import DemoGameBoy from '../components/DemoGameBoy';
 import { myProjects } from '../constants';
 
-// Placeholder for CanvasLoader
-const CanvasLoader = () => (
-  <Html center>
-    <p style={{ color: 'white' }}>Loading...</p>
-  </Html>
-);
+// Optimized CanvasLoader with timeout
+const CanvasLoader = () => {
+  const [hasTimedOut, setHasTimedOut] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setHasTimedOut(true), 15000); // 15 seconds timeout
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (hasTimedOut) {
+    return (
+      <Html center>
+        <p style={{ color: 'red' }}>Failed to load. Please refresh the page.</p>
+      </Html>
+    );
+  }
+
+  return (
+    <Html center>
+      <p style={{ color: 'white' }}>Loading...</p>
+    </Html>
+  );
+};
+
+// Lazy-load the DemoGameBoy 3D model
+const LazyDemoGameBoy = React.lazy(() => import('../components/DemoGameBoy'));
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
@@ -27,7 +47,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="work"className="c-space my-20">
+    <section id="work" className="c-space my-20">
       <p className="text-3xl font-mono text-green-400 text-center mb-8">
         My Work
       </p>
@@ -116,11 +136,16 @@ const Projects = () => {
             <Center>
               <Suspense fallback={<CanvasLoader />}>
                 <group scale={2.5} position={[0, -3, -5]} rotation={[0, 0, 1, 0]}>
-                  <DemoGameBoy imgTexture={currentProject.texture} />
+                  <LazyDemoGameBoy imgTexture={currentProject.texture} />
                 </group>
               </Suspense>
             </Center>
-            <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+            <OrbitControls
+              maxPolarAngle={Math.PI / 2}
+              enableZoom={false}
+              enableDamping={true}
+              dampingFactor={0.1}
+            />
           </Canvas>
         </div>
       </div>
