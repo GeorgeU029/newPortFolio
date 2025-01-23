@@ -12,7 +12,7 @@ import * as THREE from 'three';
 import gsap from 'gsap';
 const DemoGameBoy = (props) => {
   const group = useRef();
-  const { nodes, materials,animations } = useGLTF('/models/DemoGameBoy.glb');
+  const { nodes, materials,animations } = useGLTF('/models/DemoGameBoy3.glb');
 
   const texturePath = props.texture || '/textures/project/Project3.PNG'; // Default texture path
   const imgTexture = useTexture(props.imgTexture);
@@ -158,6 +158,6 @@ const DemoGameBoy = (props) => {
   );
 };
 
-useGLTF.preload('/models/DemoGameBoy.glb');
+useGLTF.preload('/models/DemoGameBoy3.glb');
 
 export default DemoGameBoy;
