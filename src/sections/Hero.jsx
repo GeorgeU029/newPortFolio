@@ -33,7 +33,7 @@ const Hero = () => {
         <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
           Hey, my name is George <span className="waving-hand">👋</span>
         </p>
-        <p className="sm:text-lg text-md text-emerald-400 text-center font-generalsans max-w-3xl">
+        <p className="sm:text-lg text-md text-gray-300 text-center font-generalsans max-w-3xl">
           I'm a curious computer science student with a passion for creating cool projects, solving problems, 
           and bringing creative ideas to life. From game-inspired visuals to functional tools, I'm always 
           learning, growing, and building. Let's create something awesome together!

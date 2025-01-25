@@ -155,7 +155,29 @@ export const navLinks = [
         },
       ],
     },
-   
+    {
+      title: 'Population Visualization',
+      desc: 'The Population Visualization project is an interactive data visualization tool that brings global population data to life through dynamic, visually appealing graphs and charts. Built with Python and Pygal, it processes and structures complex datasets to deliver clear and insightful representations of population sizes across countries. Designed with an emphasis on usability and performance, the application provides a seamless user experience with efficient data parsing and rendering, making it an essential tool for understanding and exploring population trends worldwide.',
+      subdesc:'Built with Python and Pygal, the Population Visualization leverages advanced data processing and visualization techniques to transform raw population data into engaging, interactive graphs, offering a seamless blend of technology and clarity.',
+      href: 'https://github.com/GeorgeU029/real_data_visualizer',
+      texture: '/textures/project/Project4.png',
+      logo: '/assets/EARTHHH.jpg',
+      logoStyle: {
+        backgroundColor: '#60f5a1',
+        background:
+          'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
+        border: '0.2px solid rgba(208, 213, 221, 1)',
+        boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+      },
+      spotlight: '/assets/spotlight1.png',
+      tags: [
+        {
+          id: 1,
+          name: 'Python',
+          path: '/assets/python.svg',
+        },
+      ],
+    },
   
   ];
   
