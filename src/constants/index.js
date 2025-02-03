@@ -58,6 +58,36 @@ export const navLinks = [
   
   export const myProjects = [
     {
+      title: 'Emotion Recognition',
+      desc: 'Emotion Recognition Model is an advanced AI-powered system designed to analyze and classify facial expressions in real time. Utilizing the power of TensorFlow, OpenCV, and MobileNetV2, this model accurately detects faces and categorizes emotions into seven distinct classes: Angry, Disgust, Fear, Happy, Sad, Surprise, and Neutral. Built with a custom data generator and optimized for AMD GPUs using DirectML, the model efficiently processes images and videos, delivering fast and reliable emotion predictions. Whether for research, human-computer interaction, or AI-driven applications, this tool provides a seamless and intuitive way to interpret human emotions through deep learning.',
+      subdesc:'Built with TensorFlow, OpenCV, and MobileNetV2, the Emotion Recognition Model leverages transfer learning and a custom data generator to classify facial expressions with high accuracy. Optimized for AMD GPUs using DirectML, it processes images and videos efficiently, providing real-time emotion detection.',
+      href: 'https://github.com/GeorgeU029/emotion_-recognition',
+      texture: '/textures/project/Project5.png',
+      logo: '/assets/p5logo.png',
+      logoStyle: {
+        backgroundColor: '#60f5a1',
+        background:
+          'linear-gradient(0deg, #A560F550, #A560F550), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(180, 150, 255, 0.8) 100%)',
+        border: '0.2px solid rgba(180, 150, 255, 1)',
+        boxShadow: '0px 0px 60px 0px rgba(120, 60, 200, 0.3)',
+      },
+      spotlight: '/assets/spotlight1.png',
+      tags: [
+        {
+          id: 1,
+          name: 'Python',
+          path: '/assets/python.svg',
+        },
+        {
+          id: 2,
+          name: 'Tensorflow',
+          path: '/assets/tensorflow.png',
+        },
+
+      ],
+    },
+  
+    {
       title: 'League Of Legends Stat Tracker',
       desc: 'LeagueStats is a comprehensive platform for League of Legends players to explore and visualize their in-game performance. Built as a full-stack web application, it combines the power of React and Python to deliver an intuitive and dynamic user experience. With seamless integration of the Riot Games API, LeagueStats fetches real-time data, showcasing detailed player statistics, including champion performance, win rates, and match history. Designed for gamers of all skill levels, it allows users to search and compare stats effortlessly, offering a unique tool to analyze and improve gameplay.',
       subdesc:
@@ -95,7 +125,7 @@ export const navLinks = [
       desc: 'CodeBase is an innovative learning platform designed to improve students proficiency in Data Structures and Algorithms (DSA) using spatial recall-based techniques. By delivering targeted notifications and interactive problem-solving sessions, CodeBase helps users retain complex concepts more effectively. Built as a collaborative effort, the application features seamless integration between a React-based frontend and a Node.js-powered backend, providing a smooth and engaging user experience tailored for aspiring software engineers.',
       subdesc:
         'Developed as a collaborative project using React, Node.js, and a custom notification system, CodeBase combines modern web technologies to help students enhance their DSA skills through spatial recall-based learning.',
-      href: 'https://code-z0ne.vercel.app/',
+      href: 'https://github.com/Erickferpinedo/Code-Zone',
       texture: '/textures/project/Project2.PNG',
       logo: '/assets/project-logo2.png',
       logoStyle: {
