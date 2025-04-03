@@ -3,9 +3,6 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="w-full bg-black py-4 flex flex-col items-center">
-      <p className="text-sm font-mono text-green-400">
-        © {new Date().getFullYear()} George Ulloa. All rights reserved.
-      </p>
       <div className="flex gap-4 mt-2">
         <a
           href="https://github.com/georgeu029"
