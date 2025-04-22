@@ -58,6 +58,41 @@ export const navLinks = [
   
   export const myProjects = [
     {
+      title: 'GatherU',
+      desc: 'GatherU is a comprehensive event management platform designed specifically for university clubs. As Co-Technical Lead, I guided a team of 10 developers to create this full-stack solution using Django, React, and PostgreSQL. The platform features intuitive event scheduling, real-time RSVP functionality, and robust club profile management. A standout feature is the gamified engagement system that tracks student participation and has successfully increased club event attendance by 30%. GatherU solves the challenge of fragmented club communications and event planning by providing a centralized platform that enhances campus community engagement.',
+      subdesc: 'Built with Django, React, and PostgreSQL, GatherU streamlines university club event management with features like interactive availability scheduling, real-time RSVPs, and engagement metrics. The implemented gamification system significantly boosts student participation across campus organizations.',
+      href: 'https://github.com/hpitta26/club-event-hub', 
+      texture: '/textures/project/Project6.png', // You'll need to add this image
+      logo: '/assets/p6logo.png', // You'll need to create this logo
+      logoStyle: {
+        backgroundColor: '#4A90E2',
+        background:
+          'linear-gradient(0deg, #4A90E250, #4A90E250), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(100, 180, 255, 0.8) 100%)',
+        border: '0.2px solid rgba(100, 180, 255, 1)',
+        boxShadow: '0px 0px 60px 0px rgba(60, 120, 200, 0.3)',
+      },
+      spotlight: '/assets/spotlight1.png',
+      tags: [
+        {
+          id: 1,
+          name: 'React',
+          path: '/assets/react.svg',
+        },
+        {
+          id: 2,
+          name: 'Django',
+          path: '/assets/django.png',
+        },
+        {
+          id: 3,
+          name: 'PostgreSQL',
+          path: '/assets/postgresql.png',
+        }
+      ],
+    },
+
+
+    {
       title: 'Emotion Recognition',
       desc: 'Emotion Recognition Model is an advanced AI-powered system designed to analyze and classify facial expressions in real time. Utilizing the power of TensorFlow, OpenCV, and MobileNetV2, this model accurately detects faces and categorizes emotions into seven distinct classes: Angry, Disgust, Fear, Happy, Sad, Surprise, and Neutral. Built with a custom data generator and optimized for AMD GPUs using DirectML, the model efficiently processes images and videos, delivering fast and reliable emotion predictions. Whether for research, human-computer interaction, or AI-driven applications, this tool provides a seamless and intuitive way to interpret human emotions through deep learning.',
       subdesc:'Built with TensorFlow, OpenCV, and MobileNetV2, the Emotion Recognition Model leverages transfer learning and a custom data generator to classify facial expressions with high accuracy. Optimized for AMD GPUs using DirectML, it processes images and videos efficiently, providing real-time emotion detection.',
